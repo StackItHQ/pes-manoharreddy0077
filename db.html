@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Database - Database Management</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('db_view') }}">View Database</a></li>
+                <li><a href="{{ url_for('edit_db') }}">Edit Database</a></li>
+                <li><a href="{{ url_for('sheet_view') }}">View Google Sheets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>View Database</h1>
+        <h2>Employees</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ employee[0] }}</td>
+                    <td>{{ employee[1] }}</td>
+                    <td>{{ employee[2] }}</td>
+                    <td>{{ employee[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Departments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for department in departments %}
+                <tr>
+                    <td>{{ department[0] }}</td>
+                    <td>{{ department[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Projects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project[0] }}</td>
+                    <td>{{ project[1] }}</td>
+                    <td>{{ project[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
