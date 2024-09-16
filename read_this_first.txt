@@ -1,0 +1,10 @@
+Hello,
+
+Thank you for the assignment, which was a great learning experience. 
+Unfortunately, I was unable to fully implement automatic change detection, a key requirement of the task. 
+I did manage to synchronize the database with Google Sheets manually (based on a trigger like button click , the most basic ) and its working  but could not achieve the automatic detection due to my current knowledge limits. 
+As a result, I did not record a demo video. I appreciate the opportunity and hope to improve further.
+
+Best regards,
+S Manohar
+
