@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home - Database Management</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Superjoin Synchronization Service</h1>
-    <nav>
-        <a href="{{ url_for('sheet_view') }}">View Google Sheet</a>
-        <a href="{{ url_for('db_view') }}">View Database</a>
-        <a href="{{ url_for('edit_db') }}">Edit Database</a>
-        <form action="{{ url_for('sync_sheet_to_db_endpoint') }}" method="post">
-            <button type="submit">Sync Google Sheet to Database</button>
-        </form>
-        <form action="{{ url_for('sync_db_to_sheet_endpoint') }}" method="post">
-            <button type="submit">Sync Database to Google Sheet</button>
-        </form>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('db_view') }}">View Database</a></li>
+                <li><a href="{{ url_for('edit_db') }}">Edit Database</a></li>
+                <li><a href="{{ url_for('sheet_view') }}">View Google Sheets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Database Management System</h1>
+        <p>Use the navigation above to view and manage your database and Google Sheets data.</p>
+    </main>
 </body>
 </html>
